@@ -1,0 +1,25 @@
+<view class="main">
+        <view wx:if="{{orders}}" class="orders-address">
+            <text class="orders-address-name">收货人: {{orders.uname}}</text>
+            <text class="orders-address-phone">电话: {{orders.phone}}</text>
+            <view class="orders-address-detail">{{orders.address}}</view>
+            <view class="orders-address-detail">付款时间：{{orders.paytime}}</view>
+        </view>
+
+ 
+
+    <view class="orders-box">
+        <view wx:for="{{orderdetails}}" wx:key="index" class="orders-list">
+            <image class="orders-thumb" src="{{item.goods[0].gImage}}"></image>
+            <view class="orders-pro-name">{{item.goods[0].gName}}</view>
+            <view class="orders-pro-price">￥{{item.goods[0].gPrice}}</view>
+            <view class="orders-count-num">×{{item.gNum}}</view>
+        </view>
+    </view>
+
+    <view class="orders-footer">
+        <view class="orders-footer-total">总金额：￥{{orders.total}}</view>
+        
+        <!-- <view class="orders-footer-btn" bindtap="toPay">去付款</view> -->
+    </view>
+</view>

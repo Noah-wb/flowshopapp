@@ -1,0 +1,42 @@
+<view class="main">
+  <view class="header">
+        <image src="{{thumb}}" class="thumb"></image>
+        <text class="nickname">{{nickname}}</text>
+        <text class="about">关于我们</text>
+    </view>
+     <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/pages/address/address">地址管理</navigator>
+        </view>
+        <view wx:if="{{hasAddress}}" class="address-list">
+            <view>{{address.name}}</view>
+            <view>{{address.phone}}</view>
+            <view>{{address.detail}}</view>
+        </view>
+    </view>
+    <view class="orders-box">
+        <view class="orders">我的订单</view>
+        <view class="orders-list">
+       
+        <block wx:for="{{orders}}" >
+         <navigator url="/pages/orderdetail/orderdetail?ono={{item.order_no}}">
+        <view class="order-list">
+        <view class="orders-number">订单编号：{{item.order_no}}</view> 
+            <!--<view class="orders-detail" wx:for="{{orderdetails}}"data-ono="{{item.order_no}}" >-->
+                <!-- <image src="{{item.goods[0].gImage}}"></image> -->
+                <view class="">收货姓名：{{item.uname}}</view>
+                <view class="">收货地址：{{item.address}}</view>
+                 
+            <!-- </view> -->
+            <!-- <text class="orders-status">{{index}}</text>  -->
+            <view class="orders-footer">
+                <text>付款时间：{{item.paytime}}</text>
+                <button size="mini" class="orders-btn" bindtap="payOrders">评价</button>
+            </view>
+            </view>
+            </navigator>
+            </block>
+           
+        </view>
+    </view>
+</view>

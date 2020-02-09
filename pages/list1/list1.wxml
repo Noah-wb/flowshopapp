@@ -1,0 +1,15 @@
+<view class="main">
+    <view class="banner">
+        <image src="cloud://syh-uik0l.7379-syh-uik0l-1256796177/imges/b1.jpg"></image>
+    </view>
+
+    <view class="list-box">
+       <view class="newest-list" wx:for='{{goods}}' wx:key='list' wx:for-item="item" style="float:left">
+                    <view bindtap="addgoods" data-index="{{index}}">
+                    <image src="{{item.gImage}}"></image>
+                    <view class="newest-text"><text>{{item.gName}}</text></view>
+                    <view class="newest-text"><text>￥ {{item.gPrice}}</text></view>
+                    </view>
+            </view>
+      </view>
+</view>
