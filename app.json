@@ -1,7 +1,5 @@
 {
   "pages": [
-    
-    
     "pages/index/index",
     "pages/user/user",
     "pages/logs/logs",
@@ -13,7 +11,8 @@
     "pages/list1/list1",
     "pages/details/details",
     "pages/test/test",
-    "pages/orderdetail/orderdetail"
+    "pages/orderdetail/orderdetail",
+    "pages/group_list/group_list"
 
   ],
   "window": {

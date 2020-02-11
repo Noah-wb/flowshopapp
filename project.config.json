@@ -103,6 +103,13 @@
 					"id": -1,
 					"name": "pages/orderdetail/orderdetail",
 					"pathName": "pages/orderdetail/orderdetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/group_list/group_list",
+					"pathName": "pages/group_list/group_list",
 					"scene": null
 				}
 			]

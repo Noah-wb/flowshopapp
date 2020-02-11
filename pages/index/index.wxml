@@ -35,9 +35,9 @@
            <view class="newest-box" >
             <view class="newest-list" wx:for='{{goods}}' wx:key='list' wx:for-item="item" style="float:left">
                     <view bindtap="addgoods" data-index="{{index}}">
-                    <image src="{{item.goods.gImage}}"></image>
-                    <view class="newest-text"><text>{{item.goods.gName}}</text></view>
-                    <view class="newest-text"><text>￥ {{item.goods.gPrice}}</text></view>
+                    <image src="{{item.gImage}}"></image>
+                    <view class="newest-text"><text>{{item.gName}}</text></view>
+                    <view class="newest-text"><text>￥ {{item.gPrice}}</text></view>
                     </view>
             </view>
           </view>

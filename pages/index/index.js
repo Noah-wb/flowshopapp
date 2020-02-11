@@ -20,6 +20,7 @@ onLoad:function(){
     data: {},
     success: function (res) {
       var goodlist = res.data
+      
       console.log(goodlist)
       if (goodlist == null) {
         var toastTest = '获取数据失败';
