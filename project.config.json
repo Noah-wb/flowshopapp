@@ -110,6 +110,20 @@
 					"id": -1,
 					"name": "pages/group_list/group_list",
 					"pathName": "pages/group_list/group_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/test1/test1",
+					"pathName": "pages/test1/test1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/group_list/group_detail/group_detail",
+					"pathName": "pages/group_list/group_detail/group_detail",
 					"scene": null
 				}
 			]

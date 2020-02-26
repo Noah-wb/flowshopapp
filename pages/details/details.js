@@ -29,7 +29,7 @@ Page({
     onLoad: function (options) {       //options用于接收上个页面传递过来的参数
       var that = this;
       var list = JSON.parse(options.good)
-      console.log(list.txt)
+      console.log(list)
       that.setData({                             //this.setData的方法用于把传递过来的id转化成小程序模板语言
       goods :list
 

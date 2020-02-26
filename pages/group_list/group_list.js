@@ -15,9 +15,8 @@ Page({
   onLoad: function (options) {
     var that = this
     wx.request({
-      url: local + 'recommend/recommends',
-      method: 'GET',
-      data: {},
+      url: local + 'group/list',
+      method: 'POST',
       success: function (res) {
         var goodlist = res.data
 
@@ -44,7 +43,14 @@ Page({
   onReady: function () {
 
   },
-
+  getProDetail: function (e) {
+    let index = e.currentTarget.dataset.index;
+    var good = JSON.stringify(this.data.goods[index]);
+    console.log(good)
+    wx.navigateTo({
+      url: '/pages/group_list/group_detail/group_detail?good=' + good,
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

@@ -8,6 +8,7 @@ Page({
   data: {
     orderdetails: [],
     orders:{},
+    total:null,
   },
 
 
@@ -20,7 +21,7 @@ Page({
     let ono = options.ono
     this.ordershow(ono);
     this.orderdetailsshow(ono);
-  },
+      },
 
   /**
    * 生命周期函数--监听页面显示
@@ -43,9 +44,14 @@ Page({
       success: function (res) {
       
         list = res.data
+
         console.log(list)
         that.setData({
           orders: list
+        })
+        var tatal = parseInt(that.data.orders.total)
+        that.setData({
+          total: tatal
         })
       }
     })

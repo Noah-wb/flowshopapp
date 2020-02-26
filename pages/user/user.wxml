@@ -16,8 +16,10 @@
     </view>
     <view class="orders-box">
         <view class="orders">我的订单</view>
-        <view class="orders-list">
-       
+        <view  wx:if="{{orderIndex}}"  class="order-null">
+       暂无订单
+       </view>
+        <view wx:else class="orders-list">
         <block wx:for="{{orders}}" >
          <navigator url="/pages/orderdetail/orderdetail?ono={{item.order_no}}">
         <view class="order-list">

@@ -10,27 +10,6 @@ Page({
       name: "hello"
     }
   },
-  // onLoad: function (options) {       //options用于接收上个页面传递过来的参数
-  //   var that = this;
-  //   that.setData({                             //this.setData的方法用于把传递过来的id转化成小程序模板语言
-  //     g_id: options.id,
-  //     g_title: options.title,
-  //     g_image: options.image,
-  //     g_num: options.num,
-  //     g_price: options.price, 
-  //   })
-  // },
-  //  onShow() {
-  //   this.setData({
-    
-  //     hasList: true,
-  //     carts: [
-  //       { id: g_id, title: g_title, image: g_image, num: g_num, price: g_price, selected: true },
-        
-  //     ]
-  //   });
-  //   this.getTotalPrice();
-  // },
   onShow:function(){
     // 获取产品展示页保存的缓存数据（购物车的缓存数组，没有数据，则赋予一个空数组）  
 
@@ -109,23 +88,7 @@ Page({
     } else {
       this.getTotalPrice();
     }
-    // this.data.carts.splice(e.target.index.substring(3), 1);
-    // if (!carts.length) {
-    //   this.setData({
-    //     // hasList: false
-    //     carts: this.data.carts
-    //   });
-    //   wx.setStorageSync('cart', this.data.carts);
-    //   this.getTotalPrice();
-    // } else {
-    //   this.setData({
-    //   cart: this.data.carts,
 
-    //     hasList:false,
-
-    //    hidden: true,})
-    // }
-    // wx.setStorageSync('cart', []);
   },
 
   /**

@@ -12,7 +12,7 @@ Page({
     duration: 800,  
     goods: [],
   },
-onLoad:function(){
+onShow:function(){
   var that = this
   wx.request({
     url: local +'recommend/recommends',

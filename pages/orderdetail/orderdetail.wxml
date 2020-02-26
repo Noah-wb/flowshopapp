@@ -12,13 +12,14 @@
         <view wx:for="{{orderdetails}}" wx:key="index" class="orders-list">
             <image class="orders-thumb" src="{{item.goods[0].gImage}}"></image>
             <view class="orders-pro-name">{{item.goods[0].gName}}</view>
-            <view class="orders-pro-price">￥{{item.goods[0].gPrice}}</view>
+
+            <view class="orders-pro-price" >单价：￥{{item.goods[0].gPrice}}</view>
             <view class="orders-count-num">×{{item.gNum}}</view>
         </view>
     </view>
 
     <view class="orders-footer">
-        <view class="orders-footer-total">总金额：￥{{orders.total}}</view>
+        <view class="orders-footer-total">付款：￥{{total}}</view>
         
         <!-- <view class="orders-footer-btn" bindtap="toPay">去付款</view> -->
     </view>

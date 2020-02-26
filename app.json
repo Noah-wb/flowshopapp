@@ -12,7 +12,11 @@
     "pages/details/details",
     "pages/test/test",
     "pages/orderdetail/orderdetail",
-    "pages/group_list/group_list"
+    "pages/group_list/group_list",
+    "pages/group_list/group_detail/group_detail",
+    "pages/group_list/group_order/group_order",
+    "pages/group_list/group_pay/group_pay",
+    "pages/test1/test1"
 
   ],
   "window": {

@@ -1,0 +1,58 @@
+<view class="main">
+  <view class="banner">
+    <image src="{{good.goods.gImage}}"></image>
+      <view class='tui-countdown-content' wx:for="{{countDownList}}" wx:key="countDownList">
+    距离结束仅剩
+    <text class='tui-conutdown-box'>{{item.day}}</text>天
+    <text class='tui-conutdown-box'>{{item.hou}}</text>时
+    <text class='tui-conutdown-box'>{{item.min}}</text>分
+    <text class='tui-conutdown-box tui-countdown-bg'>{{item.sec}}</text>秒
+  </view>
+  </view>
+
+  <view>
+
+
+    <view class="goods-box">
+      <view class="goods-title">{{good.goods.gName}}</view>
+      <view class="prices_view">
+        <text class="orgprice">￥{{good.group_price}}</text>
+        <text class="curprice">￥{{good.goods.gPrice}}</text>
+      </view>
+      <view class="group-title">
+        <view class="count-title">拼团数量{{good.g_count}}件已有
+          <text class="buy-number">{{len}}</text>件被购买\n</view>
+        <text class="condition-title">支付拼单并付款，件数不足自动退款</text>
+      </view>
+
+       <view class="goods-tab-box">
+        <view class="goods-tab-nav {{curIndex === 0 ?'on':''}}" bindtap="bindTap" data-index="0">商品详情</view>
+        <view class="goods-tab-nav {{curIndex === 1 ?'on':''}}" bindtap="bindTap" data-index="1">产品参数</view>
+        <view class="goods-tab-nav {{curIndex === 2 ?'on':''}}" bindtap="bindTap" data-index="2">售后保障</view>
+        <view class="goods-content">
+            <view wx:if="{{curIndex === 0}}">{{good.goods.gDetail}}</view>
+            <view wx:if="{{curIndex === 1}}">暂无</view>
+            <view wx:if="{{curIndex === 2}}">{{good.goods.gService}}</view>
+        </view>
+    </view>
+   
+    </view>
+
+  </view>
+ 
+  <view class="buttons" wx:if="{{notIndex}}">
+  <view class="addCart_view" bindtap="buySingle" >
+          <text class="addCart"  catchtap="buySingle">￥{{good.goods.gPrice}}/件</text>
+            <text class="addCart"   catchtap="buySingle">单独购买</text>
+        </view>
+        <view class="buy_view"  bindtap="buyByGroup">
+            <text class="buy" catchtap="buyByGroup">￥{{good.group_price}}/件</text>
+            <text class="buy" catchtap="buyByGroup">一键开团</text>
+        </view> 
+  </view>
+   <view wx:else  class="buttons">
+  <view class="endtime">
+    拼团结束
+  </view>
+  </view>
+</view>

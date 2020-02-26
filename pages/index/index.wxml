@@ -22,8 +22,9 @@
      
        </view>
         <view class="select-top-small">
+      <navigator url="/pages/group_list/group_list">
+      <image src="/image/pt.jpg"></image></navigator>
       
-      <image src="/image/pt.jpg"></image>
       
        </view>
         

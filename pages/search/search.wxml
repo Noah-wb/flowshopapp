@@ -8,8 +8,8 @@
     </view>
     <view class="result" wx:if="{{showResult}}">
         <view class="result-box" wx:if="{{result.length > 0}}">
-            <view class="result-list" wx:for="{{result}}" wx:key="index">
-                
+
+            <view  bindtap="addgoods" data-index="{{index}}" class="result-list" wx:for="{{result}}" wx:key="index">
                     <image src="{{item.gImage}}"></image>
                     <view class="result-text">
                         <text>{{item.gName}}</text>

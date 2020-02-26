@@ -11,7 +11,7 @@ Page({
     nickname: '',
     orders: [],
     hasAddress: false,
-    
+    orderIndex:true,
     address: {}
   },
   onLoad: function (options) {
@@ -28,6 +28,7 @@ Page({
         })
       }
     })
+
   },
   ordershow:function(){
 
@@ -47,7 +48,7 @@ Page({
         that.setData({
           orders: list
         })
-      
+       
         
       }
     })
@@ -69,7 +70,11 @@ Page({
       }
     })
     self.ordershow();
-  
+    if (self.data.orders) {
+      self.setData({
+        orderIndex: false
+      })
+    }
   },
   
 })

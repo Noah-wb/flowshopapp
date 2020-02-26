@@ -6,6 +6,6 @@ App({
 
   },
   globalData: {
-    local:"http://localhost:8082/" 
+    local:"http://localhost:8080/" 
   }
 })

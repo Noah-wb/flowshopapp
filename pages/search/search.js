@@ -5,8 +5,7 @@ Page({
   data: {
     history: [],//历史记录
     hot: ['百合花束', '康莱馨', '精品玫瑰花束'],//推荐
-    result: [
-    ],
+    result: [],
     showKeywords: false,
     keywords: [],//相似
     value: '',//输入的值
@@ -24,6 +23,14 @@ Page({
         value: e.detail.value
       })
       
+  },
+  addgoods: function (e) {
+    let index = e.currentTarget.dataset.index;
+    var good = JSON.stringify(this.data.result[index]);
+    console.log(good.txt)
+    wx.navigateTo({
+      url: '../details/details?good=' + good,
+    })
   },
   keywordHandle(e){
     const text = e.target.dataset.text;
